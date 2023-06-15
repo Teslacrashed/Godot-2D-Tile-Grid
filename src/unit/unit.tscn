@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://df8kkdk122c3m"]
+
+[ext_resource type="Script" path="res://src/unit/unit.gd" id="1_i56ki"]
+[ext_resource type="Shader" path="res://src/unit/unit.gdshader" id="2_esg82"]
+[ext_resource type="Texture2D" uid="uid://bsdwg3nj6rho4" path="res://src/unit/sprite_unit.png" id="2_uashe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wf42n"]
+shader = ExtResource("2_esg82")
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Quaternion(0.1, 0.4, 0.9, 1)
+shader_parameter/visible = null
+
+[node name="Unit" type="Node2D"]
+script = ExtResource("1_i56ki")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_wf42n")
+texture = ExtResource("2_uashe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, -32, 64, 0, 0, 32, -64, 0)

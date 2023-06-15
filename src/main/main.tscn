@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp7mahghalqr"]
+
+[ext_resource type="Script" path="res://src/main/main.gd" id="1_cppla"]
+[ext_resource type="Script" path="res://src/battle_map/battle_map.gd" id="2_eamx7"]
+[ext_resource type="TileSet" uid="uid://daiuy0qv1mlxi" path="res://src/tile_sets/ground_grass_128x64.tres" id="2_nnuxg"]
+[ext_resource type="PackedScene" uid="uid://7qblkgcugbla" path="res://src/cursor/cursor.tscn" id="4_1s4hh"]
+[ext_resource type="PackedScene" uid="uid://c1cptr2dr5p8l" path="res://src/ui_battle/ui_battle.tscn" id="5_qie01"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cppla")
+
+[node name="BattleMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("2_nnuxg")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 65536, 1, 0, 65537, 1, 0, 3, 1, 0, 65538, 1, 0, 131073, 1, 0, 131074, 1, 0, 4, 1, 0, 65539, 1, 0, 65540, 1, 0, 5, 1, 0, 131075, 1, 0, 196610, 1, 0, 6, 1, 0, 65541, 1, 0, 196611, 1, 0, 131076, 1, 0, 262147, 1, 0, 262148, 1, 0, 196613, 1, 0, 196612, 1, 0, 131077, 1, 0, 65542, 1, 0, 7, 1, 0, 131078, 1, 0, 65543, 1, 0, 8, 1, 0, 262149, 1, 0, 327685, 1, 0, 327686, 1, 0, 262150, 1, 0, 196614, 1, 0, 393223, 1, 0, 327687, 1, 0, 196615, 1, 0, 131079, 1, 0, 262151, 1, 0, 196616, 1, 0, 196617, 1, 0, 131081, 1, 0, 65544, 1, 0, 131080, 1, 0, 65545, 1, 0, 262152, 1, 0, 262153, 1, 0, 327688, 1, 0, 393224, 1, 0)
+script = ExtResource("2_eamx7")
+
+[node name="Cursor" parent="." instance=ExtResource("4_1s4hh")]
+
+[node name="UIBattle" parent="." instance=ExtResource("5_qie01")]

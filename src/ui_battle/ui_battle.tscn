@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1cptr2dr5p8l"]
+
+[ext_resource type="Script" path="res://src/ui_battle/hud_battle.gd" id="1_4sjby"]
+
+[node name="UIBattle" type="CanvasLayer"]
+
+[node name="HUDBattle" type="Node2D" parent="."]
+script = ExtResource("1_4sjby")

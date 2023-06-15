@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://veldc4cj8cfl"]
+
+[ext_resource type="Script" path="res://src/tile_grid/tile_grid.gd" id="1_u1lob"]
+
+[node name="TileGrid" type="TileMap"]
+y_sort_enabled = true
+format = 2
+layer_0/y_sort_enabled = true
+script = ExtResource("1_u1lob")

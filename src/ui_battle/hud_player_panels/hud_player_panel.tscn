@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://r60jwhtdkav1"]
+
+[ext_resource type="Script" path="res://src/ui_battle/hud_player_panels/hud_player_panel.gd" id="1_f31lk"]
+[ext_resource type="Texture2D" uid="uid://cebugqq6m2ij5" path="res://src/ui_battle/hud_player_panels/sprite_lifebar_bg.png" id="2_pjdqw"]
+[ext_resource type="Texture2D" uid="uid://c1velshoyfce6" path="res://src/ui_battle/hud_player_panels/sprite_lifebar.png" id="3_ktyoy"]
+
+[node name="HudPlayerPanel" type="MarginContainer"]
+custom_minimum_size = Vector2(196, 192)
+script = ExtResource("1_f31lk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(196, 192)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Alias" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MV" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="AT" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="DF" type="Label" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HPCurrent" type="Label" parent="VBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 24)
+layout_mode = 2
+
+[node name="HPMaximum" type="Label" parent="VBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 24)
+layout_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+texture_over = ExtResource("2_pjdqw")
+texture_progress = ExtResource("3_ktyoy")

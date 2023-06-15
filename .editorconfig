@@ -1,0 +1,107 @@
+# .editorconfig
+# vim: ft=dosini
+# https://editorconfig.org
+
+
+# Options
+# =======
+
+# root                     = true / false
+# charset                  = latin1 / utf-8 / utf8-bom / utf-16be / utf-16le
+# end_of_line              = cr / lf / crlf
+# indent_size              = uint
+# indent_style             = tab / space
+# insert_final_newline     = true / false
+# tab_width                = indent_size / uint
+# trim_trailing_whitespace = true / false
+
+
+# General Settings
+# ================
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+
+# File Extension Settings
+# =======================
+
+# Text :: Data :: Ignore-List
+[*.*ignore]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Data :: Serialization :: GL Transmission Format Files
+[*.gltf]
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Text :: Data :: Serialization :: JSON Files
+[*.json]
+indent_size = 2
+indent_style = space
+tab_width = 2
+
+# Text :: Programming :: Godot :: GDScript Files
+[*.gd]
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Godot Shader Files
+[*.gdshader]
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Godot :: Shader Files
+[*.shader]
+indent_size = 4
+indent_style = tab
+tab_width = 4
+
+# Text :: Programming :: Shell :: Run Commands
+# Shell-style files.
+[*.*rc]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Programming :: Shell :: OS :: Linux :: Shell Script Files
+[*.{bash,fish,sh,zsh}]
+indent_size = 2
+indent_style = tab
+tab_width = 2
+
+# Text :: Programming :: Shell :: OS :: Windows :: Powershell Script Files
+[*.ps1]
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Text :: Prose :: Markdown Files
+[*.md]
+indent_size = 2
+indent_style = space
+tab_width = 2
+trim_trailing_whitespace = false
+
+# Text :: Prose :: ReStructured Text
+[*.rst]
+indent_size = 4
+indent_style = space
+tab_width = 4
+
+# Individual File Settings
+# ========================
+
+[LICENSE]
+insert_final_newline = false
